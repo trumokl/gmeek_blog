@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://img.desm.eu.org/file/8c92df99e01bcc322cb76.jpg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="GitHub 有一些特殊的仓库类型和用途，以下是一些值得关注的特殊仓库：
+
+1. 个人主页仓库（Username Repository）
+- 格式：`username/username.github.io`
+- 用于创建个人网站
+- 可以使用 GitHub Pages 托管静态网站
+- 通常用于展示个人简历、博客或作品集
+
+2. README Profile 仓库
+- 与用户名同名的仓库
+- 例如：`username/username`
+- 可以在 GitHub 个人主页展示自定义的 README
+- 支持 Markdown 格式
+- 可以包含个人介绍、技能、项目等信息
+
+3. 徽章收集仓库
+- 收集和展示各种编程和开源徽章
+- 帮助开发者了解不同的徽章使用方法
+- 可以为项目添加状态、版本、下载等徽章
+
+4. Awesome 系列仓库
+- 精选资源列表
+- 涵盖编程语言、框架、工具等
+- 帮助开发者发现优秀的资源和项目
+- 通常以 'Awesome-XXX' 命名
+
+5. 算法和面试仓库
+- 算法解题集合
+- 面试经验和面试题汇总
+- LeetCode 解题方案
+- 编程面试准备资源
+
+6. 编程学习路径仓库
+- 提供学习路线图
+- 涵盖不同编程语言和技术栈
+- 包含学习资源、书籍推荐
+- 帮助初学者规划学习path
+
+7. 开源指南仓库
+- 开源项目最佳实践
+- 如何参与开源项目
+- 编写贡献指南
+- 开源社区治理经验
+
+8. 技术文档模板仓库
+- 项目文档模板
+- README 编写指南
+- 贡献者指南模板
+- 许可证模板
+
+9. 技术周报/资讯仓库
+- 定期更新技术资讯
+- 行业趋势追踪
+- 技术文章合集
+- 开发者学习资源
+
+10. 学习打卡/挑战仓库
+- 100 天编程挑战
+- 每日学习打卡
+- 编程技能提升
+- 社区互动和激励
+
+11. API 示例仓库
+- 各类 API 使用示例
+- 不同语言的 API 调用方法
+- 开放 API 集合
+- 帮助开发者学习 API 使用
+
+12. 设计模式仓库
+- 各种编程语言的设计模式实现
+- 代码示例和解析
+- 面向对象设计原则
+- 提高代码架构能力
+
+13. Docker/容器配置仓库
+- 开发环境配置
+- 各种服务的 Dockerfile
+- 容器编排示例
+- 快速搭建开发环境
+
+14. 开源监控仓库
+- 项目趋势监控
+- 开源项目统计
+- Star 增长趋势
+- 技术生态分析
+
+15. 安全漏洞汇总仓库
+- 安全漏洞收集
+- CVE 漏洞信息
+- 安全最佳实践
+- 技术安全资讯
+
+这些特殊仓库展示了 GitHub 不仅仅是代码托管平台，更是一个知识分享、学习交流的生态系统。">
+<meta property="og:title" content="github特殊仓库">
+<meta property="og:description" content="GitHub 有一些特殊的仓库类型和用途，以下是一些值得关注的特殊仓库：
+
+1. 个人主页仓库（Username Repository）
+- 格式：`username/username.github.io`
+- 用于创建个人网站
+- 可以使用 GitHub Pages 托管静态网站
+- 通常用于展示个人简历、博客或作品集
+
+2. README Profile 仓库
+- 与用户名同名的仓库
+- 例如：`username/username`
+- 可以在 GitHub 个人主页展示自定义的 README
+- 支持 Markdown 格式
+- 可以包含个人介绍、技能、项目等信息
+
+3. 徽章收集仓库
+- 收集和展示各种编程和开源徽章
+- 帮助开发者了解不同的徽章使用方法
+- 可以为项目添加状态、版本、下载等徽章
+
+4. Awesome 系列仓库
+- 精选资源列表
+- 涵盖编程语言、框架、工具等
+- 帮助开发者发现优秀的资源和项目
+- 通常以 'Awesome-XXX' 命名
+
+5. 算法和面试仓库
+- 算法解题集合
+- 面试经验和面试题汇总
+- LeetCode 解题方案
+- 编程面试准备资源
+
+6. 编程学习路径仓库
+- 提供学习路线图
+- 涵盖不同编程语言和技术栈
+- 包含学习资源、书籍推荐
+- 帮助初学者规划学习path
+
+7. 开源指南仓库
+- 开源项目最佳实践
+- 如何参与开源项目
+- 编写贡献指南
+- 开源社区治理经验
+
+8. 技术文档模板仓库
+- 项目文档模板
+- README 编写指南
+- 贡献者指南模板
+- 许可证模板
+
+9. 技术周报/资讯仓库
+- 定期更新技术资讯
+- 行业趋势追踪
+- 技术文章合集
+- 开发者学习资源
+
+10. 学习打卡/挑战仓库
+- 100 天编程挑战
+- 每日学习打卡
+- 编程技能提升
+- 社区互动和激励
+
+11. API 示例仓库
+- 各类 API 使用示例
+- 不同语言的 API 调用方法
+- 开放 API 集合
+- 帮助开发者学习 API 使用
+
+12. 设计模式仓库
+- 各种编程语言的设计模式实现
+- 代码示例和解析
+- 面向对象设计原则
+- 提高代码架构能力
+
+13. Docker/容器配置仓库
+- 开发环境配置
+- 各种服务的 Dockerfile
+- 容器编排示例
+- 快速搭建开发环境
+
+14. 开源监控仓库
+- 项目趋势监控
+- 开源项目统计
+- Star 增长趋势
+- 技术生态分析
+
+15. 安全漏洞汇总仓库
+- 安全漏洞收集
+- CVE 漏洞信息
+- 安全最佳实践
+- 技术安全资讯
+
+这些特殊仓库展示了 GitHub 不仅仅是代码托管平台，更是一个知识分享、学习交流的生态系统。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://trumokl.github.io/gmeek_blog/post/github-te-shu-cang-ku.html">
+<meta property="og:image" content="https://img.desm.eu.org/file/8c92df99e01bcc322cb76.jpg">
+<title>github特殊仓库</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">github特殊仓库</h1>
+<div class="title-right">
+    <a href="https://trumokl.github.io/gmeek_blog" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/trumokl/gmeek_blog/issues/4" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p>GitHub 有一些特殊的仓库类型和用途，以下是一些值得关注的特殊仓库：</p>
+<ol>
+<li>个人主页仓库（Username Repository）</li>
+</ol>
+<ul>
+<li>格式：<code class="notranslate">username/username.github.io</code></li>
+<li>用于创建个人网站</li>
+<li>可以使用 GitHub Pages 托管静态网站</li>
+<li>通常用于展示个人简历、博客或作品集</li>
+</ul>
+<ol start="2">
+<li>README Profile 仓库</li>
+</ol>
+<ul>
+<li>与用户名同名的仓库</li>
+<li>例如：<code class="notranslate">username/username</code></li>
+<li>可以在 GitHub 个人主页展示自定义的 README</li>
+<li>支持 Markdown 格式</li>
+<li>可以包含个人介绍、技能、项目等信息</li>
+</ul>
+<ol start="3">
+<li>徽章收集仓库</li>
+</ol>
+<ul>
+<li>收集和展示各种编程和开源徽章</li>
+<li>帮助开发者了解不同的徽章使用方法</li>
+<li>可以为项目添加状态、版本、下载等徽章</li>
+</ul>
+<ol start="4">
+<li>Awesome 系列仓库</li>
+</ol>
+<ul>
+<li>精选资源列表</li>
+<li>涵盖编程语言、框架、工具等</li>
+<li>帮助开发者发现优秀的资源和项目</li>
+<li>通常以 "Awesome-XXX" 命名</li>
+</ul>
+<ol start="5">
+<li>算法和面试仓库</li>
+</ol>
+<ul>
+<li>算法解题集合</li>
+<li>面试经验和面试题汇总</li>
+<li>LeetCode 解题方案</li>
+<li>编程面试准备资源</li>
+</ul>
+<ol start="6">
+<li>编程学习路径仓库</li>
+</ol>
+<ul>
+<li>提供学习路线图</li>
+<li>涵盖不同编程语言和技术栈</li>
+<li>包含学习资源、书籍推荐</li>
+<li>帮助初学者规划学习path</li>
+</ul>
+<ol start="7">
+<li>开源指南仓库</li>
+</ol>
+<ul>
+<li>开源项目最佳实践</li>
+<li>如何参与开源项目</li>
+<li>编写贡献指南</li>
+<li>开源社区治理经验</li>
+</ul>
+<ol start="8">
+<li>技术文档模板仓库</li>
+</ol>
+<ul>
+<li>项目文档模板</li>
+<li>README 编写指南</li>
+<li>贡献者指南模板</li>
+<li>许可证模板</li>
+</ul>
+<ol start="9">
+<li>技术周报/资讯仓库</li>
+</ol>
+<ul>
+<li>定期更新技术资讯</li>
+<li>行业趋势追踪</li>
+<li>技术文章合集</li>
+<li>开发者学习资源</li>
+</ul>
+<ol start="10">
+<li>学习打卡/挑战仓库</li>
+</ol>
+<ul>
+<li>100 天编程挑战</li>
+<li>每日学习打卡</li>
+<li>编程技能提升</li>
+<li>社区互动和激励</li>
+</ul>
+<ol start="11">
+<li>API 示例仓库</li>
+</ol>
+<ul>
+<li>各类 API 使用示例</li>
+<li>不同语言的 API 调用方法</li>
+<li>开放 API 集合</li>
+<li>帮助开发者学习 API 使用</li>
+</ul>
+<ol start="12">
+<li>设计模式仓库</li>
+</ol>
+<ul>
+<li>各种编程语言的设计模式实现</li>
+<li>代码示例和解析</li>
+<li>面向对象设计原则</li>
+<li>提高代码架构能力</li>
+</ul>
+<ol start="13">
+<li>Docker/容器配置仓库</li>
+</ol>
+<ul>
+<li>开发环境配置</li>
+<li>各种服务的 Dockerfile</li>
+<li>容器编排示例</li>
+<li>快速搭建开发环境</li>
+</ul>
+<ol start="14">
+<li>开源监控仓库</li>
+</ol>
+<ul>
+<li>项目趋势监控</li>
+<li>开源项目统计</li>
+<li>Star 增长趋势</li>
+<li>技术生态分析</li>
+</ul>
+<ol start="15">
+<li>安全漏洞汇总仓库</li>
+</ol>
+<ul>
+<li>安全漏洞收集</li>
+<li>CVE 漏洞信息</li>
+<li>安全最佳实践</li>
+<li>技术安全资讯</li>
+</ul>
+<p>这些特殊仓库展示了 GitHub 不仅仅是代码托管平台，更是一个知识分享、学习交流的生态系统。开发者可以通过这些仓库学习、分享和成长。</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://trumokl.github.io/gmeek_blog">数据探幽</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","trumokl/gmeek_blog");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+
+
+</html>
